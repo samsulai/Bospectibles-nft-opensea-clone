@@ -23,6 +23,7 @@ const style = {
 }
 const Collection = () => {
 	const router = useRouter()
+	const {provider} = useWeb3()
 	console.log(router.query)
 	console.log(router.query.collectionId)
 	return <h2>{router.query.collectionId}</h2>
