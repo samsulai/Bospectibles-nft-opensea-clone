@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import { useRouter } from 'next/router'
 import {useWeb3} from '@3rdweb/hooks'
+import { client } from '../../lib/sanityClient'
+import { ThirdwebSDK } from '@3rdweb/sdk'
 const style = {
   bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
   bannerImage: `w-full object-cover`,
@@ -36,9 +38,64 @@ if(!provider) return
 	const sdk = newThirdwebSDK(
 provider.getSigner(), 'https://eth-rinkeby.alchemyapi.io/v2/JyUTGWJBYy41eN3gO-u2wimxxt9A_R8_'
 		)
-
+return sdk.getNFTModule(collectionId)
 
 }, [provider])
+
+//get all nfts in the collection
+useEffect(() => {
+if(!nftModule) return
+	;(async () => {
+		const nfts = await nftModule.getAll()
+		setNfts(nfts)
+	})()
+
+}, [nftModule])
+
+
+const marketPlaceModule = useMemo(()=> {
+if(!provider) return 
+const sdk = new newThirdwebSDK(
+provider.getSigner(), 'https://eth-rinkeby.alchemyapi.io/v2/JyUTGWJBYy41eN3gO-u2wimxxt9A_R8_'
+
+	)
+return sdk.getMarketPlaceModule(
+'0xF0E54E6619be05fcA99AeaC89b674ca997CfEc65 '
+	)
+
+}, [provider])
+//get all listings in the collection
+
+useEffect(() => {
+	if(!marketPlaceModule) return
+		;(async () => {
+         setListings(await marketPlaceModule.getAllListings())
+		})()
+}, [marketPlaceModule])
+
+const fetchCollectionData = async (sanityClient = client) => {
+    const query = `*[_type == "marketItems" && contractAddress == "${collectionId}" ] {
+      "imageUrl": profileImage.asset->url,
+      "bannerImageUrl": bannerImage.asset->url,
+      volumeTraded,
+      createdBy,
+      contractAddress,
+      "creator": createdBy->userName,
+      title, floorPrice,
+      "allOwners": owners[]->,
+      description
+    }`
+
+    const collectionData = await sanityClient.fetch(query)
+
+    
+
+    // the query returns 1 object inside of an array
+    await setCollection(collectionData[0])
+  }
+ useEffect(() => {
+    fetchCollectionData()
+  }, [collectionId])
 
 	console.log(router.query)
 	console.log(router.query.collectionId)
