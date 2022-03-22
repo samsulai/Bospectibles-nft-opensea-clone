@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useRouter } from 'next/router'
+import {useWeb3} from '@3rdweb/hooks'
 const style = {
   bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
   bannerImage: `w-full object-cover`,
@@ -24,6 +25,21 @@ const style = {
 const Collection = () => {
 	const router = useRouter()
 	const {provider} = useWeb3()
+	const collectionId = router.query
+const [collection, setCollection] = useState({})
+const [nfts, setNfts] = useState([])
+const [listings, setListings] = useState([])
+
+const nftModule = useMemo(() => {
+if(!provider) return
+
+	const sdk = newThirdwebSDK(
+provider.getSigner(), 'https://eth-rinkeby.alchemyapi.io/v2/JyUTGWJBYy41eN3gO-u2wimxxt9A_R8_'
+		)
+
+
+}, [provider])
+
 	console.log(router.query)
 	console.log(router.query.collectionId)
 	return <h2>{router.query.collectionId}</h2>
