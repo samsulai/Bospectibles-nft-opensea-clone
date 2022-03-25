@@ -26,7 +26,7 @@ const NFTCard = ({ nftItem, title, listings }) => {
   useEffect(() => {
     const listing = listings.find((listing) => listing.asset.id === nftItem.id)
     if (Boolean(listing)) {
-      setIsListed = true
+      setIsListed(true)
       setPrice(listing.buyoutCurrencyValuePerToken.displayValue)
     }
   }, [listings, nftItem])
