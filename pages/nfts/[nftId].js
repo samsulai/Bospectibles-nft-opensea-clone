@@ -1,4 +1,4 @@
-import Header from '../../components/Header'
+import Header from '../../components/header'
 import { useEffect, useMemo, useState } from 'react'
 import { useWeb3 } from '@3rdweb/hooks'
 import { ThirdwebSDK } from '@3rdweb/sdk'
@@ -26,8 +26,7 @@ const Nft = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
+      provider.getSigner()
     )
     return sdk.getNFTModule('0x66a576A977b7Bccf510630E0aA5e450EC11361Fa')
   }, [provider])
@@ -48,8 +47,7 @@ const Nft = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
+      provider.getSigner()
     )
 
     return sdk.getMarketplaceModule(

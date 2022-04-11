@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useWeb3 } from '@3rdweb/hooks'
 import { client } from '../../lib/sanityClient'
 import { ThirdwebSDK } from '@3rdweb/sdk'
-import Header from '../../components/Header'
+import Header from '../../components/header'
 import { CgWebsite } from 'react-icons/cg'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { HiDotsVertical } from 'react-icons/hi'
@@ -48,8 +48,7 @@ const Collection = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/JyUTGWJBYy41eN3gO-u2wimxxt9A_R8_'
+      provider.getSigner()
     )
     return sdk.getNFTModule(collectionId)
   }, [provider])
@@ -68,8 +67,7 @@ const Collection = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/JyUTGWJBYy41eN3gO-u2wimxxt9A_R8_'
+      provider.getSigner()
     )
     return sdk.getMarketplaceModule(
       '0xF0E54E6619be05fcA99AeaC89b674ca997CfEc65'
