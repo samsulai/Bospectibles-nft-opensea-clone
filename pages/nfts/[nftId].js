@@ -28,7 +28,7 @@ const Nft = () => {
     const sdk = new ThirdwebSDK(
       provider.getSigner()
     )
-    return sdk.getNFTModule('0x66a576A977b7Bccf510630E0aA5e450EC11361Fa')
+    return sdk.getNFTModule('0x1a59BA14667bA33FF29646472FD4eEB352D18c4A')
   }, [provider])
 
   // get all NFTs in the collection
@@ -51,7 +51,7 @@ const Nft = () => {
     )
 
     return sdk.getMarketplaceModule(
-      '0x93A771F7ce845C33381f677489cF21a5964EDD0b'
+      '0xF0E54E6619be05fcA99AeaC89b674ca997CfEc65'
     )
   }, [provider])
 
