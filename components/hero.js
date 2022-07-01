@@ -35,10 +35,10 @@ OpenSea is the World&apos;s first and largest NFT marketplace.
 </div>
 </div>
 <div className={style.cardContainer}>
-<img className="rounded-t-lg" src="https://freeimage.host/i/jz0iX9" height={400} width={400}/>
+<img className="rounded-t-lg" src="https://drive.google.com/file/d/1RxGoWQ-_ZedJXW_E9bkGvM7yDN532lMn/view?usp=sharing" height={400} width={400}/>
 <div className={style.infoContainer}>
 <img 
-className="h-[2.25rem] rounded-full" src="https://freeimage.host/i/jz0iX9" alt=""
+className="h-[2.25rem] rounded-full" src="https://drive.google.com/file/d/1RxGoWQ-_ZedJXW_E9bkGvM7yDN532lMn/view?usp=sharing" alt=""
 />
 <div className={style.author}>
 <div className={style.name}>Bospectibles</div>
