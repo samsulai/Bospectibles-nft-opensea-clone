@@ -1,4 +1,5 @@
 import React from 'react'
+import hero from "../assets/opensea.png"
 const style = {
   wrapper: `relative`,
   container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
@@ -35,10 +36,10 @@ OpenSea is the World&apos;s first and largest NFT marketplace.
 </div>
 </div>
 <div className={style.cardContainer}>
-<img className="rounded-t-lg" src="https://drive.google.com/file/d/1RxGoWQ-_ZedJXW_E9bkGvM7yDN532lMn/view?usp=sharing" height={400} width={400}/>
+<img className="rounded-t-lg" src={hero} height={400} width={400}/>
 <div className={style.infoContainer}>
 <img 
-className="h-[2.25rem] rounded-full" src="https://drive.google.com/file/d/1RxGoWQ-_ZedJXW_E9bkGvM7yDN532lMn/view?usp=sharing" alt=""
+className="h-[2.25rem] rounded-full" src={hero} alt=""
 />
 <div className={style.author}>
 <div className={style.name}>Bospectibles</div>
