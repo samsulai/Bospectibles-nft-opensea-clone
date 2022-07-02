@@ -28,7 +28,7 @@ return (
 Disover, collect and sell extraordinary NFTs
 </div>
 <div className={style.description}>
-OpenSea is the World&apos;s first and largest NFT marketplace.
+Bospectibles is the World&apos;s first and largest NFT marketplace.
 </div>
 <div className={style.ctaContainer}>
 <button className={style.accentedButton}>Explore</button>
