@@ -25,7 +25,7 @@ return (
 <div className={style.contentWrapper}>
 <div className={style.copyContainer}>
 <div className={style.title}>
-Discover (Search), Collect , Sell and forge ahead in the Decarbonisation Economy Pathway.
+Search, Collect , Sell and forge ahead in the Decarbonisation Economy Pathway.
 </div>
 <div className={style.description}>
 Bospectibles is the World&apos;s first and largest NFT marketplace.
