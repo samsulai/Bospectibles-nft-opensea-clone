@@ -2,7 +2,7 @@ import React from 'react'
 import hero from "../assets/hero.png"
 const style = {
   wrapper: `relative`,
-  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/pCw7QZULiqzHM1NO2W_dQKKO46KqKcgnLZ09Qa0KBh6XAFzHpfNombPAoqzpWiRAGVJNNuoldMUTxeBqSepPbROTiSw2lB4SzQ5CkUWErH3YkqWEis34nfwhWwoEEcUIHnCkUXBRqepACWIe344pjd_mplt7EvpNA4TKCuhycZe2Ja2BYcGuJiakMPdeJyuOnRKNRfce8Hy8juPM1hXzgloZwHXrJClQavN1ZSTldBaDOd-ZY1-hoeCYaHJDL7OCJEsczQfOc29zJm5PApiInZHy8HdNJ1XItr3KYn6CCXOGGwe2mlgDDPNYc5lnkQpksraBgZVoH1U3AxRsKHA3Xa8teRNCnP0Txe9KMw3C982TUMOGcyha7e9v0D3PUIJhirBuIYI2NefDOhVdZ8rf5BAz2z7KxeyyqSI7blS2gp6xmTo-tc3gqN0p-va2wBjyxEs8b0s9BoJNsi0Ku7Du41bpjKcpze1B_vmIfjkylVmZ7KeBejem7XibELRtqsY9lQpNwvUF9jtKaDO8jArM7flKR_ZCoYV4DwRl8YgKgL_hB0VL2XIHWUhfS_mMq4gb0TXKNvnEIaK27zieXXLaLj_k6CvbMFq6giZeXo6_a-F44cEr-WmZsukXeQ_JX3xEg_MfHD6TsoeHZpNsPLX1MRoK1GcY5MD6BvHBWJtKEaiFEfcUGxAXM9Ps2zPWVR2LS2EPBAS0MW-Rpt03KyDurdtHaH6jBEDP23d6No0k90BM9VR3HyYYTf_Itvg=w629-h640-no?authuser=0')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
+  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://i.ibb.co/mzHGN0k/all-2.webp')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
   contentWrapper: `flex h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `w-1/2`,
   title: `relative text-white text-[46px] font-semibold`,
@@ -25,10 +25,10 @@ return (
 <div className={style.contentWrapper}>
 <div className={style.copyContainer}>
 <div className={style.title}>
-Search, Collect , Sell and forge ahead in the Decarbonisation Economy Pathway.
+Search, collect, sell, benefit and contribute your quotas to the Decarbonisation Economy Pathway in an array of digital assets.
 </div>
 <div className={style.description}>
-Bospectibles is the World&apos;s first and largest NFT marketplace.
+Bospectibles, is engaging in the most important topic to humanity at present:Climate Change.
 </div>
 <div className={style.ctaContainer}>
 <button className={style.accentedButton}>Explore</button>
